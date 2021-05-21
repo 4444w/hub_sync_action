@@ -16,26 +16,11 @@ jobs:
     - name: Mirror Github to Gitee with white list
       uses: Yikun/hub-mirror-action@master
       with:
-        src: github/yichahucha
+        src: github/4444w
         dst: gitee/h4w
         dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
         dst_token:  ${{ secrets.GITEE_TOKEN }}
-        static_list: 'surge'
+        static_list: 'surge,dust'
         force_update: true
         debug: true
         
-        name: Run1
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout source codes
-      uses: actions/checkout@v2
-    - name: Mirror Github to Gitee with white list
-      uses: Yikun/hub-mirror-action@master
-      with:
-        src: github/monk-coder
-        dst: gitee/h4w
-        dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
-        dst_token:  ${{ secrets.GITEE_TOKEN }}
-        static_list: 'dust'
-        force_update: true
-        debug: true
